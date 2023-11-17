@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="can" width="400" height="400" style="border: 2px solid; cursor: crosshair;"></canvas>
+    <button onclick="click()">go</button>
+    <span id="result"></span>
+    <script src="./handwriting.js"></script>
+<script>
+    var can1 = new handwriting.Canvas(document.getElementById("can"));
+
+
+    function click(){
+        
+      var e = document.getElementById('can');
+      canvas.setOptions({language: e.options[e.selectedIndex].value});
+      canvas.recognize();
+    
+
+    }
+</script>
+</body>
+</html>
